@@ -1,16 +1,17 @@
 # Paseo plugins
 
-Three plugins for [Paseo](https://paseo.sh) 0.8. Each plugin lives in its own directory and can be installed independently.
+Plugins for [Paseo](https://paseo.sh). Each plugin lives in its own directory and can be installed independently.
 
 | Plugin | What it adds |
 | --- | --- |
 | [time-since](time-since/README.md) | Elapsed time since the last chat message, shown above the composer. |
 | [setup-monitor](setup-monitor/README.md) | Live worktree setup progress and logs in Explorer. |
 | [workspace-links](workspace-links/README.md) | Quick access to workspace URLs from a JSON file. |
+| [history](history/README.md) | Inspect chat messages, tools, and raw session records from a composer pill. |
 
 ## Install
 
-Use Paseo 0.8.x and turn on **Settings → Plugins → Enable plugins** on the Paseo daemon host. Run the install command below for each plugin you want.
+Turn on **Settings → Plugins → Enable plugins** on the Paseo daemon host. Run the install command below for each plugin you want.
 
 Plugin code is trusted and unsandboxed. Server code runs as the daemon user. Client code runs inside Paseo.
 
@@ -57,7 +58,7 @@ paseo plugin add stevecastaneda/paseo-plugins --path workspace-links
 Start from a checkout of this repository. Each plugin has its own dependencies and scripts; run these commands from the plugin directory. You need npm and a Node.js version that supports `--experimental-strip-types` to run the tests.
 
 ```bash
-cd time-since   # or setup-monitor or workspace-links
+cd time-since   # or setup-monitor, workspace-links, or history
 npm install
 npm run typecheck
 npm test
